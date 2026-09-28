@@ -1,4 +1,4 @@
-﻿# Matrix Holding - Monorepo
+# Matrix Holding - Monorepo
 
 Chứa 3 projects:
 - matrix-holding-1

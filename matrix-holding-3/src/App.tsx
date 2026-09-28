@@ -15,7 +15,7 @@ import NotFoundPage from './pages/NotFoundPage';
 export default function App() {
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col bg-[#F5F3EE] text-[#111111] selection:bg-[#5A1827] selection:text-[#F5F3EE]">
           <Navbar />

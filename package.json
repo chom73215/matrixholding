@@ -1,0 +1,21 @@
+{
+  "name": "matrix-holding-unified",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unified Matrix Holding Ecosystem with routes /v1, /v2, /v3",
+  "main": "server.js",
+  "scripts": {
+    "install:all": "npm --prefix matrix-holding-1 install && npm --prefix matrix-holding-2 install && npm --prefix matrix-holding-3 install",
+    "build:v1": "npm --prefix matrix-holding-1 run build",
+    "build:v2": "npm --prefix matrix-holding-2 run build",
+    "build:v3": "npm --prefix matrix-holding-3 run build",
+    "build": "npm run install:all && npm run build:v1 && npm run build:v2 && npm run build:v3",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

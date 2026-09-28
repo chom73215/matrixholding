@@ -16,7 +16,7 @@ import { Contact } from './pages/Contact';
 export const App: React.FC = () => {
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="relative min-h-screen bg-[#050505] text-[#F0F6FC] selection:bg-[#00F0FF]/30 selection:text-white flex flex-col font-sans overflow-x-hidden">
           {/* Animated Digital Matrix Background */}
           <MatrixBackground density="normal" interactive={true} />
