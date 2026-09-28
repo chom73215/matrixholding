@@ -1,0 +1,11 @@
+node_modules
+matrix-holding-1/node_modules
+matrix-holding-2/node_modules
+matrix-holding-3/node_modules
+matrix-holding-1/dist
+matrix-holding-2/dist
+matrix-holding-3/dist
+.git
+.gitignore
+.env
+*.log
