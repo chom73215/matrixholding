@@ -1,0 +1,234 @@
+/* ── Contact Page Styles ────────────────────────────────── */
+.contactPage {
+  overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ── Left Column ────────────────────────────────────────── */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.infoDesc {
+  font-size: 0.95rem;
+  color: #555d6e;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: var(--light-gray);
+  border: 1px solid rgba(11,18,32,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #8a8f9e;
+  margin-bottom: 0.25rem;
+}
+
+.infoValue {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.infoValue:hover {
+  color: var(--gold);
+}
+
+/* ── Right Column: Form Card ────────────────────────────── */
+.formCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCard {
+  background: var(--light-gray);
+  border: 1px solid rgba(11,18,32,0.08);
+  border-radius: 8px;
+  padding: 3rem;
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+}
+
+.formCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.formCardSub {
+  font-size: 0.88rem;
+  color: #6a7180;
+}
+
+/* ── Map Placeholder ────────────────────────────────────── */
+.mapSection {
+  margin-top: 5rem;
+}
+
+.mapCard {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(11,18,32,0.08);
+  box-shadow: 0 4px 20px rgba(11,18,32,0.05);
+}
+
+.mapVisual {
+  height: 320px;
+  background: var(--navy);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mapVisual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.03) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.03) 40px
+    );
+}
+
+.mapPin {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pinIcon {
+  color: var(--gold);
+  filter: drop-shadow(0 2px 8px rgba(201,168,106,0.5));
+}
+
+.pinPulse {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(201,168,106,0.3);
+  position: absolute;
+  top: 18px;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.mapOverlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(11,18,32,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 1.25rem 1.75rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.mapTag {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+}
+
+.mapOverlay h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.mapOverlay p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .formCard {
+    padding: 2rem 1.5rem;
+  }
+  .mapOverlay {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+}

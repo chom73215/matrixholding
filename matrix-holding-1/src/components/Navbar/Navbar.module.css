@@ -1,0 +1,384 @@
+/* ── Navbar ─────────────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.light {
+  background: #fff;
+  border-bottom-color: rgba(11, 18, 32, 0.08);
+}
+
+.navbar.dark {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.navbar.scrolled {
+  background: #fff !important;
+  border-bottom-color: rgba(11, 18, 32, 0.08) !important;
+  box-shadow: 0 2px 20px rgba(11, 18, 32, 0.06);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ── Logo ───────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+  margin-right: auto;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logoMain {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: inherit;
+  transition: color 0.4s ease;
+}
+
+.logoSub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+}
+
+.dark .logoMain,
+.dark .logo .logoMain {
+  color: #fff;
+}
+
+/* ── Desktop Nav ────────────────────────────────────────── */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  color: var(--navy);
+  transition: color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+
+.dark .navLink {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--navy);
+  background: var(--light-gray);
+}
+
+.dark .navLink:hover,
+.dark .navLink.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Action Controls (Language + CTA) ───────────────────── */
+.actionControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ── Language Switcher ──────────────────────────────────── */
+.langSwitch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  background: rgba(11, 18, 32, 0.04);
+  border: 1px solid rgba(11, 18, 32, 0.08);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
+}
+
+.dark .langSwitch {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.scrolled .langSwitch {
+  background: rgba(11, 18, 32, 0.04);
+  border-color: rgba(11, 18, 32, 0.08);
+}
+
+.langIcon {
+  color: var(--gold);
+  margin-right: 0.1rem;
+}
+
+.langBtn {
+  background: none;
+  border: none;
+  padding: 0.1rem 0.25rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #8a8f9e;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.dark .langBtn {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.langBtn:hover {
+  color: var(--navy);
+}
+
+.dark .langBtn:hover {
+  color: #fff;
+}
+
+.langActive {
+  color: var(--gold) !important;
+  font-weight: 700;
+}
+
+.langDivider {
+  color: rgba(11, 18, 32, 0.2);
+  font-size: 0.65rem;
+}
+
+.dark .langDivider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* ── CTA ────────────────────────────────────────────────── */
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.55rem 1.1rem;
+  border-radius: 4px;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  background: #1a2a45;
+  transform: translateY(-1px);
+}
+
+.dark .ctaBtn {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.dark .ctaBtn:hover {
+  background: #e2c78a;
+}
+
+/* ── Hamburger ──────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: var(--light-gray);
+}
+
+.dark .hamburger {
+  color: #fff;
+}
+
+.dark .hamburger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Mobile Menu ────────────────────────────────────────── */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  background: var(--navy);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 2rem 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  overflow-y: auto;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobileLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  animation: mobileSlide 0.4s ease both;
+  animation-delay: calc(var(--i) * 60ms);
+}
+
+.mobileLink.active,
+.mobileLink:hover {
+  color: #fff;
+}
+
+.mobileCta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  padding: 0.9rem 0;
+  text-decoration: none;
+  animation: mobileSlide 0.4s ease both;
+  animation-delay: calc(var(--i) * 60ms);
+}
+
+/* ── Mobile Language Box ────────────────────────────────── */
+.mobileLangBox {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobileLangLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+.mobileLangBtns {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.mobileLangBtn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobileLangActive {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.mobileFooter {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 2rem;
+}
+
+@keyframes mobileSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .desktopNav,
+  .actionControls {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+}

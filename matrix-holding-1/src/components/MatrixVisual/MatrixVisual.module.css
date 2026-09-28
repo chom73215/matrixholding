@@ -1,0 +1,58 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 0 40px rgba(201,168,106,0.1));
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes spinSlowRev {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    r: 10px;
+    stroke-opacity: 0.4;
+  }
+  50% {
+    r: 15px;
+    stroke-opacity: 0.1;
+  }
+}
+
+.rotatingHex {
+  transform-origin: 250px 250px;
+  animation: spinSlow 60s linear infinite;
+}
+
+.rotatingHexRev {
+  transform-origin: 250px 250px;
+  animation: spinSlowRev 40s linear infinite;
+}
+
+.pulsingNode {
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.pulsingNode2 {
+  animation: nodePulse 3s ease-in-out infinite 1s;
+}
+
+.pulsingNode3 {
+  animation: nodePulse 3s ease-in-out infinite 2s;
+}

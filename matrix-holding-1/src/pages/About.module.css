@@ -1,0 +1,269 @@
+/* ── About Page Styles ──────────────────────────────────── */
+.about {
+  overflow-x: hidden;
+}
+
+/* ── Editorial Grid ─────────────────────────────────────── */
+.editorialGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.editorialMeta {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+}
+
+.metaTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+.editorialBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.leadPara {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--navy);
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+}
+
+.bodyPara {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555d6e;
+}
+
+.demoNotice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--light-gray);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #8a8f9e;
+  margin-top: 1rem;
+}
+
+.demoBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(11,18,32,0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  color: var(--navy);
+}
+
+/* ── Vision / Mission ───────────────────────────────────── */
+.visionMissionBlock {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.largeHeadingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.labelGhost {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(11,18,32,0.25);
+}
+
+.labelGhostDark {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.25);
+}
+
+.hugeHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.hugeHeadingLight {
+  color: #fff;
+}
+
+.vmSubtext {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #6a7180;
+  max-width: 700px;
+}
+
+.vmSubtextLight {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ── Core Values ────────────────────────────────────────── */
+.valuesHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+}
+
+.valuesTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--navy);
+}
+
+.valuesSubtitle {
+  font-size: 0.95rem;
+  color: #6a7180;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.valuesAsymmetricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.valueCard {
+  background: var(--light-gray);
+  border: 1px solid rgba(11,18,32,0.06);
+  border-radius: 8px;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11,18,32,0.07);
+  border-color: rgba(201,168,106,0.3);
+}
+
+.valueCardAccent {
+  background: #fff;
+  border-color: rgba(201,168,106,0.3);
+}
+
+.valueTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.valueNumber {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.valueEn {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8f9e;
+}
+
+.valueBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.valueTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.valueDesc {
+  font-size: 0.85rem;
+  color: #6a7180;
+  line-height: 1.6;
+}
+
+/* ── About CTA Banner ───────────────────────────────────── */
+.aboutCta {
+  margin-top: 5rem;
+  padding: 3rem;
+  background: var(--light-gray);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-left: 3px solid var(--gold);
+}
+
+.aboutCtaText h3 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.aboutCtaText p {
+  font-size: 0.9rem;
+  color: #6a7180;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .editorialGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .editorialMeta {
+    position: static;
+  }
+  .valuesAsymmetricGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .valuesHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .valuesAsymmetricGrid {
+    grid-template-columns: 1fr;
+  }
+  .aboutCta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+}

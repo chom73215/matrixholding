@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #F5F3EE;
+    color: #111111;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #F5F3EE;
+    color: #111111;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  ::selection {
+    background-color: #5A1827;
+    color: #F5F3EE;
+  }
+}
+
+/* Editorial line draw animation */
+.line-reveal {
+  position: relative;
+}
+.line-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .line-reveal::after,
+.line-reveal:hover::after {
+  width: 100%;
+}
+
+/* Editorial subtle image zoom on hover */
+.img-editorial {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+.group:hover .img-editorial {
+  transform: scale(1.04);
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F3EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5A1827;
+}
+
+/* Grain / Texture overlay for high-fashion tactile feeling */
+.editorial-grain {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom cursor indicator when dragging or hovering */
+.luxury-cursor {
+  cursor: default;
+}
